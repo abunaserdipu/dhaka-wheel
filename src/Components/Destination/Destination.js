@@ -11,7 +11,6 @@ const Destination = () => {
   const transportDetails = transports.find(
     (transport) => transport.transportId == transportId
   );
-  console.log(transportDetails);
   return (
     <div>
       <Header />

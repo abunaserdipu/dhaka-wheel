@@ -53,6 +53,7 @@ const LogIn = () => {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     if (newUser && user.email && user.password) {
       createUserWithEmailAndPassword(user.name, user.email, user.password).then(
         (res) => {
@@ -65,13 +66,12 @@ const LogIn = () => {
         handleResponse(res, true);
       });
     }
-    e.preventDefault();
   };
 
   const handleResponse = (res, redirect) => {
     setUser(res);
     setLoggedInUser(res);
-    if (redirect) {
+    if (!res.error) {
       history.replace(from);
     }
   };
@@ -80,8 +80,14 @@ const LogIn = () => {
     <div>
       <Header />
       <div className="container my-5">
-        <div className="card p-3">
+        <div className="card p-3 shadow-lg rounded">
           <div style={{ textAlign: "center" }}>
+            <p style={{ color: "red" }}>{user.error}</p>
+            {user.success && (
+              <p style={{ color: "green" }}>
+                user {newUser ? "created" : "signIn"} successfully
+              </p>
+            )}
             <form onSubmit={handleSubmit}>
               {newUser && (
                 <input
@@ -112,7 +118,11 @@ const LogIn = () => {
                 required
               />
               <br />
-              <input type="submit" value={newUser ? "Signup" : "SignIn"} />
+              <input
+                type="submit"
+                className="form-control btn btn-primary"
+                value={newUser ? "Signup" : "SignIn"}
+              />
             </form>
             <label htmlFor="newUser">Already have an account?</label>
             <Link onClick={() => setNewUser(!newUser)} name="newUser">
@@ -120,19 +130,16 @@ const LogIn = () => {
             </Link>
 
             <br />
-            <p style={{ color: "red" }}>{user.error}</p>
-            {user.success && (
-              <p style={{ color: "green" }}>
-                user {newUser ? "created" : "loggedIn"} successfully
-              </p>
-            )}
-            <button
-              type="button"
-              onClick={googleSignIn}
-              className="btn btn-primary"
-            >
-              Sign In With Google
-            </button>
+
+            <div className="d-grid">
+              <button
+                type="button"
+                onClick={googleSignIn}
+                className="btn btn-primary"
+              >
+                Sign In With Google
+              </button>
+            </div>
           </div>
         </div>
       </div>

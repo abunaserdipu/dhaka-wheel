@@ -15,7 +15,7 @@ const Home = () => {
     >
       <Header />
       <div className="container">
-        <div className="row justify-content-center">
+        <div className="row p-5 my-5">
           {transports.map((transport) => (
             <Transport
               key={transport.transportId}
