@@ -1,8 +1,10 @@
-# Transport service website "Dhaka Wheel"
+# Dhaka Wheel Transport Service Website
 
-## Features of this website: 
-* *Core feature is firebase authentication used for email and google signUp signIn*
-* *Jump one page to another with react router*
-* *Private route used*
+[site-live-link](https://dhaka-wheelwithreact.web.app/home)
 
- [site-live-link](https://dhaka-wheelwithreact.web.app/home)
+## Features of this website:
+
+- Responsive ReactJS project with firebase authentication.
+- Only logged-in users can book a vehicle also see the available vehicle information and rent price.
+- Private Route used for the secure specific page.
+- Developed Using ReactJS, Bootstrap, Firebase authentication, React Router, and hosted in Firebase.
