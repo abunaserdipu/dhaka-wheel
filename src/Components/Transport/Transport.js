@@ -8,11 +8,12 @@ const Transport = (props) => {
     history.push(`destination/${transportId}`);
   };
   return (
-    <div className="col-md-3">
-      <div className="card" onClick={() => handleTransport(transportId)}>
+    
+      <div className="col-md-3 py-5">
+      <div className="card bg-success" style={{height:"13rem", hover:"shadow", cursor:"pointer"}} onClick={() => handleTransport(transportId)}>
         <img src={photo} className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h3>{name}</h3>
+        <div className="card-body text-center">
+          <h3 className="card-text text-white">{name}</h3>
         </div>
       </div>
     </div>

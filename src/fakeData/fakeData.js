@@ -2,14 +2,16 @@ const transports = [
   {
     name: "BIKE",
     photo:
-      "https://www.searchpng.com/wp-content/uploads/2019/01/Suzuki-Bike-PNG-Images.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJeKfwZU9GfYZ8XY4fwkSMu9d7mGaVT-dZrQ&usqp=CAU",
+    // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdY5ahuKC99SMLx15vkCifNRlraBf9uZzUGg&usqp=CAU",
     transportId: "bike",
     cost: "$30",
   },
   {
     name: "CAR",
     photo:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpwkjI9LmEOdYusbHAJvJ6jHhdwIaryCPzzQ&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrV1XP0_fgpydVJM3E29g-A7jT-A-5VFAyrJTHSeK8Evo-O7NUb2kyU-ZuWkIeSM_91zQ&usqp=CAU",
+      // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpwkjI9LmEOdYusbHAJvJ6jHhdwIaryCPzzQ&usqp=CAU",
     transportId: "car",
     cost: "$50",
   },

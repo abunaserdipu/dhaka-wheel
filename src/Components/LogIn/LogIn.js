@@ -120,7 +120,7 @@ const LogIn = () => {
               <br />
               <input
                 type="submit"
-                className="form-control btn btn-primary"
+                className="form-control btn btn-success"
                 value={newUser ? "Signup" : "SignIn"}
               />
             </form>
@@ -135,7 +135,7 @@ const LogIn = () => {
               <button
                 type="button"
                 onClick={googleSignIn}
-                className="btn btn-primary"
+                className="btn btn-success"
               >
                 Sign In With Google
               </button>

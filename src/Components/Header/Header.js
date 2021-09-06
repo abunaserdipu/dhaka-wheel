@@ -26,23 +26,25 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link className="nav-link text-success" aria-current="page" to="/">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/login">
+                <Link className="nav-link text-success" to="/login">
                   Destination
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link btn btn-primary" to="/login">
-                  Log in
-                </Link>
+                {loggedInUser.name ?(<li className="fw-bold">{loggedInUser.name}
+                  <button className="btn btn-success ms-5 text-white fw-bold" onClick={() => setLoggedInUser({})}>Sign Out</button>
+              </li>):
+              (<Link className="nav-link btn btn-success text-white fw-bold" to="/login">
+              Log in
+            </Link>)}
+                
               </li>
-              <li className="nav-item">
-                <p>{loggedInUser.name || loggedInUser.displayName}</p>
-              </li>
+              
             </ul>
           </div>
         </div>
